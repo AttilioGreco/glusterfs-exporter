@@ -15,6 +15,7 @@ RUN apk add --update bash git curl make && \
     cp ./extras/conf/gluster-exporter.toml.sample /tmp/gluster-exporter.toml && \
     cp ./build/gluster-exporter /tmp/
 
+
 FROM alpine:3.9
 
 COPY --from=build /tmp/gluster-exporter /
